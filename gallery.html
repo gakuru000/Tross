@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Wedding Bliss</title>
+
+   <link rel="stylesheet" href="styles.css">
+  <style >/* Photo Slider Styles */
+.photo-slider {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prev {
+  left: 10px;
+  background-color: grey;
+}
+
+.next {
+  right: 10px;
+background-color: grey;
+}
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+ </style>
+  <!-- (Optional) Include Lightbox2 CSS if you still need lightbox features -->
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <h1>Wedding Bliss</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="booking.html">Booking</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Gallery Section (Existing Grid Gallery) -->
+  <section class="gallery">
+    <div class="container">
+      <h2>Our Beautiful Moments</h2>
+     
+        <!-- Add more items as needed -->
+      
+    </div>
+  </section>
+<img 
+  src="setup.png" 
+  srcset="setup.png"
+  sizes="(max-width: 600px) 100vw, 50vw" 
+  alt="Beautiful wedding moment"
+  loading="lazy"
+>
+
+  <!-- NEW: Photo Slider Section -->
+  <section class="photo-slider">
+    <div class="container">
+      <h2>Slide Through Our Memories</h2>
+      <div class="slider">
+        <div class="slides">
+          <!-- Each .slide holds one image -->
+          <div class="slide">
+            <img src="setup.png" alt="Elegant Decor" />
+          </div>
+          <div class="slide">
+            <img src="romantic.png" alt="Romantic Ceremony" />
+          </div>
+          <div class="slide">
+            <img src="joy.png" alt="Joyful Celebration" />
+          </div>
+          <div class="slide">
+            <img src="avenue.png" alt="Magical Venue" />
+          </div>
+          <div class="slide">
+            <img src="flowers.png" alt="Special Moments" />
+          </div>
+        </div>
+        <!-- Navigation Controls -->
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Wedding Bliss. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- (Optional) If you use Lightbox2 for your grid gallery -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script> -->
+
+  <!-- Slider JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const slides = document.querySelectorAll(".slide");
+      const slider = document.querySelector(".slides");
+      const prev = document.querySelector(".prev");
+      const next = document.querySelector(".next");
+      let currentSlide = 0;
+      const totalSlides = slides.length;
+
+      // Function to update the slide position
+      function updateSlider() {
+        slider.style.transform = "translateX(-" + currentSlide * 100 + "%)";
+      }
+
+      // Next arrow event
+      next.addEventListener("click", function () {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+      });
+
+      // Previous arrow event
+      prev.addEventListener("click", function () {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      });
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>

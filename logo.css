@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tross Group - Logo Display</title>
+    <style>
+        /* Remove default margin/padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Make html and body fill the entire viewport */
+        html, body {
+            height: 100%;
+            font-family: Arial, sans-serif; /* Set a default font */
+        }
+
+        /* Container that spans the full viewport */
+        .logo-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex; /* Centering the image */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            background-color: #f0f0f0; /* Optional: Background color while loading */
+        }
+
+        /* The image fills the container and maintains its aspect ratio */
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="image2.jpg" alt="Company Logo" />
+    </div>
+</body>
+</html

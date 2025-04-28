@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Book your wedding services with The Tross Group. Fill out the booking form for an easy and seamless experience.">
+  <title>The Tross Group - Booking</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="header-container">
+      <h1 class="brand">THE TROSS GROUP</h1>
+      <nav>
+        <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="dash.html">Dashboard</a></li>
+          <li><a href="testimonies.html">Testimonies</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+              <li><a href="gallery.html" class="active">Gallery</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Booking Section -->
+  <main>
+    <section class="booking-section">
+      <h2>Booking System</h2>
+      <p>Book your wedding services easily by filling out the form below.</p>
+      <form id="bookingForm" action="connect.php" method="POST">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Select Service</label>
+          <select id="service" name="service" required>
+            <option value="">--Please choose an option--</option>
+            <option value="venue">Venue Booking</option>
+            <option value="decoration">Decoration & Setup</option>
+            <option value="catering">Catering</option>
+            <option value="photography">Photography</option>
+
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <button type="submit" class="btn"><a href="dash.php">Submit Booking</button></a>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 THE TROSS GROUP. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>

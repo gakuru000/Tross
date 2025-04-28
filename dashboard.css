@@ -1,0 +1,77 @@
+/* dashboard.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Dashboard Links */
+.dashboard-links {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-links .btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.dashboard-links .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Sections */
+#accountSettings, #myBookings {
+  margin-bottom: 40px;
+}
+
+#accountSettings h2, #myBookings h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* Table styling for Admin Dashboard */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f8f8f8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .dashboard-links .btn {
+    margin: 5px 0;
+    display: block;
+  }
+}

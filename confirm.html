@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Email Confirmation - THE TROSS GROUP</title>
+  <link rel="stylesheet" href="email_confirmation.css">
+</head>
+<body>
+  <div class="confirmation-container">
+    <h2>Email Confirmation</h2>
+    <p>A confirmation email has been sent to your registered email address.</p>
+    <p>Please check your inbox (and spam folder) and click the link in the email to verify your account.</p>
+    <p>If you have received a confirmation code, you can also enter it below.</p>
+
+    <form action="confirm_email.php" method="POST" class="confirmation-form">
+      <div class="form-group">
+        <label for="confirmation_code">Confirmation Code</label>
+        <input type="text" id="confirmation_code" name="confirmation_code" placeholder="Enter your confirmation code" required>
+      </div>
+      <button type="submit" class="btn">Confirm Email</button>
+    </form>
+
+    <p>Didn't receive an email? <a href="resend_confirmation.php" class="resend-link">Resend Email</a></p>
+  </div>
+</body>
+</html>
